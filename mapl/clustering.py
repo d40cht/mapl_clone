@@ -17,11 +17,8 @@
 import abc
 from typing import Type
 
-import apache_beam as beam
 import numpy as np
 from sklearn import cluster as sk_cluster
-
-Metrics = beam.metrics.Metrics
 
 
 class ClusteringAlgorithm(abc.ABC):
@@ -253,7 +250,6 @@ def _calculate_correlation(
   valid_mask &= mask2_crop.flatten() > 0
 
   if not valid_mask.any():
-    Metrics.counter('DistanceCorrelationDbscan', 'no_valid_mask').inc()
     return 0.0
 
   flat1 = flat1[valid_mask]

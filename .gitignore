@@ -1,0 +1,56 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.cache/
+
+# Distribution / packaging / build artifacts (pip, flit, setuptools)
+build/
+dist/
+*.egg-info/
+.eggs/
+*.whl
+*.tar.gz
+pip-wheel-metadata/
+
+# Virtual environments & package manager artifacts (uv, venv, conda)
+.venv/
+venv/
+env/
+ENV/
+.uv/
+.python-version
+
+# Testing & coverage (pytest, pytest-xdist, coverage)
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Type checking, formatting & linting (pyink, pylint, mypy, pytype, ruff)
+.pytype/
+.mypy_cache/
+.ruff_cache/
+.pylint.d/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE & editor temporary files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Local inference outputs & downloaded NetCDF datasets
+*.nc
+*_candidates.parquet
+*_predicted.parquet
+*_enhancement.npy

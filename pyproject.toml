@@ -21,23 +21,18 @@ keywords = []
 # Installed locally with `pip install -e .`
 dependencies = [
     "absl-py",
-    "apache-beam[gcp]",
-    "dataclasses-json",
-    "earthengine-api",
-    "jax",
-    "matplotlib",
-    "ml_collections",
     "netCDF4",
     "numpy",
     "pandas",
+    "pyarrow",
     "pyproj",
-    "python-dateutil",
     "rasterio",
+    "scipy",
     "shapely",
     "scikit-learn",
     "tensorflow",
-    "tensorflow_datasets",
     "toolz",
+    "tqdm",
     "utm",
     "xarray",
 ]
@@ -51,18 +46,18 @@ repository = "https://github.com/google-research/mapl"
 changelog = "https://github.com/google-research/mapl/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
-# Installed through `pip install -e .[dev]`
+# Installed through `pip install '.[docs]'`.
+docs = [
+    # Install `apitree` with all extensions (sphinx, theme,...)
+    "sphinx-apitree[ext]",
+]
+
+[dependency-groups]
 dev = [
     "pytest",
     "pytest-xdist",
     "pylint>=2.6.0",
     "pyink",
-]
-
-# Installed through `pip install '.[docs]'`.
-docs = [
-    # Install `apitree` with all extensions (sphinx, theme,...)
-    "sphinx-apitree[ext]",
 ]
 
 [tool.pyink]
